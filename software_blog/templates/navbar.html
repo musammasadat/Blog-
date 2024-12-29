@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <!-- Bootstrap CSS için CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Özel CSS -->
+    <style>
+        /* Genel yazı tipi */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9; /* Hafif gri arka plan */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar stilleri */
+        .navbar {
+            background-color: #dda8a8; /* Yeşil tonunda arka plan */
+            font-size: 20px;
+        }
+
+        .navbar .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #ffffff !important;
+        }
+
+        .navbar .nav-link {
+            font-weight: 600;
+            color: #ffffff !important; /* Yazı rengini beyaz yap */
+            margin-right: 15px; /* Linkler arasına boşluk */
+        }
+
+        .navbar .nav-link:hover {
+            color: #220d03 !important; /* Link üzerine gelince altın rengi */
+            text-decoration: underline; /* Alt çizgi ekle */
+        }
+
+        /* Ana içerik stilleri */
+        .container {
+            background-color: #ffffff; /* Beyaz içerik kutusu */
+            border-radius: 10px; /* Yuvarlatılmış köşeler */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+            padding: 100px;
+        }
+
+        h1, h2, h3, p {
+            font-weight: 600;
+            color: #333333; /* Daha koyu yazı rengi */
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Yazılım Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Kayit Ol </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Giris Yap </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/rpa">RPA Uzmani</a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+<style>
+    /* Genel stil */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Footer (alt navbar) */
+    footer {
+        background-color: #b67979;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    /* Sosyal medya ikonları için navbar */
+    .social-navbar {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* İkonlar */
+    .social-icon img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+    }
+
+    /* İkon üzerine gelindiğinde büyüme efekti */
+    .social-icon:hover img {
+        transform: scale(1.2);
+    }
+
+    h3{
+        font-size: 18px;
+        color: whitesmoke;
+        padding-right: 0%;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<footer>
+    <h3>Sosyal medya hesaplarımızda bizi takip etmeyi unutmayın! </h3>
+    <div class="social-navbar">
+        <a href="https://www.instagram.com/hesapadi" target="_blank" class="social-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/hesapadi" target="_blank" class="social-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://www.twitter.com/hesapadi" target="_blank" class="social-icon">
+            <img src="https://images.freeimages.com/image/large-previews/f35/x-twitter-logo-on-black-circle-5694247.png" alt="Twitter">
+        </a>
+    </div>
+</footer>
+</body>
+</html>

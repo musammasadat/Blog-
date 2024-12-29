@@ -1,0 +1,91 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+<hr>
+<h2> BT Giriş Programı</h2>
+<hr>
+<h5> BT Giriş Programı'nın pozisyonlara ait gelişim programlarına katılmadan önce tamamlanması zorunludur. Başarılı tamamlanması sonrasında istenilen gelişim programına devam edilebilir.</h5>
+<h5>Bilgi Teknolojileri (BT), verilerin toplanması, işlenmesi, depolanması, iletilmesi ve yönetilmesiyle ilgili teknolojilerin genel adıdır. BT, bilgisayarlar, yazılımlar, ağlar, internet ve diğer dijital araçlar ile ilişkili tüm teknolojik sistemleri kapsar. Hem bireyler hem de işletmeler için çok önemli bir alan olan bilgi teknolojileri, günlük yaşamda, ticaret, sağlık, eğitim, iletişim ve birçok sektörde geniş bir kullanım alanına sahiptir.</h5>
+    
+<img src="https://www.notalbunu.com/wp-content/uploads/2022/03/temel-bilgi-teknolojileri.jpg" alt="Örnek Fotoğraf">
+
+
+<p>Aşağıdaki gelişim programlarından birini seç ve kariyerini ilerlet!</p>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    .topic {
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #f9f9f9;
+        transition: background-color 0.3s ease;
+    }
+
+    .topic:hover {
+        background-color: #eaeaea;
+    }
+
+    .info {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        background-color: #f0f8ff;
+        display: none; /* Başlangıçta gizli */
+    }
+
+    p{
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+
+
+
+<div class="topic" onclick="showInfo('topic1')">Bilgi Teknolojilerine Giriş - Teknik</div>
+<div id="topic1" class="info">
+    Bilgi teknolojileri (BT), verilerin toplanması, işlenmesi, saklanması, dağıtılması ve kullanılması için yazılım, donanım ve iletişim teknolojilerini kapsayan bir alandır. Teknik açıdan, bilgi teknolojileri, organizasyonların bilgiye dayalı süreçlerini yürütmesini sağlayan araç ve yöntemlerin tasarlanması, uygulanması ve yönetilmesiyle ilgilenir.
+    Bu programda katılımcıların yazılım, donanım, sistem, altyapı, süreç, bilgi güvenliği konularında temel kavramları öğrenmeleri, pozisyon bazlı gelişim programlarında yer alan eğitimlerin daha iyi kavranabilmesi için ön hazırlık yapılması hedeflenmektedir.
+
+</div>
+
+<div class="topic" onclick="showInfo('topic2')">Bilgi Teknolojilerine Giriş - Genel</div>
+<div id="topic2" class="info">
+    Bilgi teknolojileri, verilerin toplanması, işlenmesi, saklanması ve iletilmesi süreçlerini kapsayan teknolojik sistemlerin genel adıdır. Bilgisayarlar, yazılımlar, ağ sistemleri ve veri tabanları, bilgi teknolojilerinin temel bileşenleridir.
+    Bu programda katılımcıların yazılım, donanım, sistem, altyapı, süreç, bilgi güvenliği konularında temel kavramları öğrenmeleri, pozisyon bazlı gelişim programlarında yer alan eğitimlerin daha iyi kavranabilmesi için ön hazırlık yapılması hedeflenmektedir.
+</div>
+
+<div class="topic" onclick="showInfo('topic3')">Bilgi Teknolojilerine Giriş - Kişisel Gelişim</div>
+<div id="topic3" class="info">
+    Bilgi Teknolojileri (BT), bilgisayarlar, yazılımlar, ağ sistemleri ve dijital araçların insan hayatında nasıl kullanıldığını inceleyen geniş bir alandır. Bu alan sadece teknik beceriler kazandırmakla kalmaz, aynı zamanda bireylerin kişisel gelişimlerine de önemli katkılar sağlar.
+
+
+    Bu programda katılımcıların yazılım, donanım, sistem, altyapı, süreç, bilgi güvenliği konularında temel kavramları öğrenmeleri, pozisyon bazlı gelişim programlarında yer alan eğitimlerin daha iyi kavranabilmesi için ön hazırlık yapılması hedeflenmektedir.
+</div>
+
+<script>
+    function showInfo(id) {
+        // Tüm bilgileri gizle
+        const allInfo = document.querySelectorAll('.info');
+        allInfo.forEach(info => info.style.display = 'none');
+
+        // Seçilen bilginin görünmesini sağla
+        const selectedInfo = document.getElementById(id);
+        if (selectedInfo) {
+            selectedInfo.style.display = 'block';
+        }
+    }
+</script>
+</body>
+
+<a href="/" class="btn btn-primary">Geri Dön</a>
+
+{% endblock %}

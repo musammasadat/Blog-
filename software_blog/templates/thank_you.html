@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geri Bildirim</title>
+
+    <script type="text/javascript">
+        function goHome() {
+            if (confirm("Ana sayfaya dönmek ister misiniz?")) {
+                window.location.href = "/";
+            }
+        }
+    </script>
+</head>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #2193b0;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2193b0;
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Teşekkür ederiz!</h1>
+    <p>Bizi tercih ettiğiniz için gönülden teşekkür ederiz.</p>
+    <button onclick="goHome()">Ana Sayfaya Dönmek İçin Tıklayın!</button>
+
+    <script>
+        function goHome() {
+            window.location.href = "/"; // Ana sayfa URL'sini buraya ekleyin.
+        }
+    </script>
+</body>
+</html>
+
+
